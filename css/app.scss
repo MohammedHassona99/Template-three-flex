@@ -114,3 +114,61 @@ header {
   }
 }
 /* End Header */
+/* Start landing */
+.landing {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -40px;
+    width: 100%;
+    height: 100%;
+    background-color: #ececec;
+    z-index: -1;
+    transform: skewY(-6deg);
+    transform-origin: top left;
+  }
+  .container {
+    min-height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    padding-bottom: 120px;
+    .text {
+      flex: 1;
+      h1 {
+        font-size: 40px;
+        margin: 0;
+        letter-spacing: -3px;
+      }
+      p {
+        font-size: 24px;
+        line-height: 1.7;
+        margin: 5px 0 0;
+        color: #666;
+        max-width: 500px;
+      }
+    }
+    .image {
+      img {
+        width: 600px;
+        max-width: 100%;
+      }
+    }
+  }
+  .go-down {
+    position: absolute;
+    color: var(--main-color);
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: var(--main-transition);
+    &:hover {
+      color: var(--main-color-alt);
+    }
+    i {
+      font-size: inherit;
+    }
+  }
+}
+/* End landing */
