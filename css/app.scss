@@ -45,7 +45,7 @@ ul {
   }
 }
 .main-title {
-  margin: 100px auto;
+  margin: 0px auto 80px;
   border: 2px solid black;
   padding: 10px 20px;
   font-size: 30px;
@@ -308,6 +308,62 @@ header {
   }
 }
 /* End landing */
+/* Start Articles */
+.articles {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+    article {
+      box-shadow: 0 2px 15px rgba($color: #000000, $alpha: 0.1);
+      background-color: white;
+      border-radius: 6px;
+      overflow: hidden;
+      transition: transform var(--main-transition),
+        box-shadow var(--main-transition);
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 2px 15px rgba($color: #000000, $alpha: 0.2);
+      }
+      img {
+        width: 100%;
+        max-width: 100%;
+      }
+      .content {
+        padding: 20px;
+        h3 {
+          margin: 0;
+        }
+        p {
+          margin: 10px 0 0;
+          line-height: 1.5;
+          color: #777;
+        }
+      }
+      .info {
+        padding: 20px;
+        border-top: 1px solid #e6e6e7;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+          color: var(--main-color);
+          font-weight: bold;
+        }
+        svg {
+          color: var(--main-color);
+        }
+      }
+      &:hover .info svg {
+        animation: moving-arrow 0.6s linear infinite;
+      }
+    }
+  }
+}
+/* End Articles */
 /* Start Animation */
 @keyframes up-to-down {
   0%,
@@ -356,6 +412,11 @@ header {
     width: 100%;
     height: 100%;
     border-radius: 0;
+  }
+}
+@keyframes moving-arrow {
+  100% {
+    transform: translateX(10px);
   }
 }
 /* end Animation */
