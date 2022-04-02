@@ -770,6 +770,52 @@ header {
   }
 }
 /* End Services */
+
+/* Start Our Work */
+.our-skills {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+  .container {
+    display: flex;
+    align-items: center;
+    img {
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
+    .skills {
+      flex: 1;
+      .skill {
+        h3 {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          span {
+            font-size: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            color: var(--main-color);
+            padding: 3px 5px;
+          }
+        }
+        .progress {
+          height: 30px;
+          background-color: #eee;
+          position: relative;
+          span {
+            position: absolute;
+            left: 0;
+            top: 0%;
+            height: 100%;
+            background-color: var(--main-color);
+          }
+        }
+      }
+    }
+  }
+}
+/* End Our Work */
 /* Start Animation */
 @keyframes up-to-down {
   0%,
