@@ -1098,6 +1098,100 @@ header .container .main-nav .mega-menu .links li:not(:last-child) {
 }
 
 /* End Our Work */
+/* Start Work Steps */
+.work-steps {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+  background-color: var(--section-background);
+}
+
+.work-steps .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 991px) {
+  .work-steps .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.work-steps .container .image {
+  max-width: 100%;
+  margin-right: 100px;
+}
+
+@media (max-width: 991px) {
+  .work-steps .container .image {
+    margin: 0 0 50px;
+  }
+}
+
+.work-steps .container .info .step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  background-color: #f6f5f5;
+  border: 2px solid white;
+  position: relative;
+  z-index: 1;
+}
+
+.work-steps .container .info .step::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #ededed;
+  z-index: -1;
+  -webkit-transition: var(--main-transition);
+  transition: var(--main-transition);
+}
+
+.work-steps .container .info .step:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+.work-steps .container .info .step img {
+  width: 64px;
+  margin-right: 30px;
+}
+
+.work-steps .container .info .step .text h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.work-steps .container .info .step .text p {
+  color: #777;
+  line-height: 1.7;
+  margin: 10px 0 0;
+  font-size: 18px;
+}
+
+/* End Work Steps */
 /* Start Animation */
 @-webkit-keyframes up-to-down {
   0%,
