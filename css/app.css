@@ -924,6 +924,117 @@ header .container .main-nav .mega-menu .links li:not(:last-child) {
 }
 
 /* End Team Members */
+/* Start Services */
+.services {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  background-color: var(--section-background);
+  position: relative;
+}
+
+.services .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.services .container .service {
+  background-color: white;
+  -webkit-box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.13), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.13), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  counter-increment: services;
+  -webkit-transition: var(--main-transition);
+  transition: var(--main-transition);
+  position: relative;
+}
+
+.services .container .service::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: var(--main-color);
+  height: 3px;
+  top: -3px;
+  width: 0;
+  -webkit-transition: var(--main-transition);
+  transition: var(--main-transition);
+}
+
+.services .container .service:hover::before {
+  width: 100%;
+}
+
+.services .container .service:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.services .container .service > svg {
+  display: block;
+  margin: 30px auto 20px;
+  text-align: center;
+  color: #d5d5d5;
+}
+
+.services .container .service > h3 {
+  text-align: center;
+  color: var(--main-color);
+  margin: 20px 0 40px;
+  font-size: 25px;
+}
+
+.services .container .service .info {
+  position: relative;
+  padding: 15px;
+  background-color: #f9f9f9;
+  text-align: right;
+}
+
+.services .container .service .info::before {
+  content: "0" counter(services);
+  position: absolute;
+  background-color: var(--main-color);
+  color: white;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 80px;
+  font-size: 30px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 15px;
+}
+
+.services .container .service .info::after {
+  content: "";
+  position: absolute;
+  background-color: #d5d5d5;
+  top: 0;
+  left: 80px;
+  width: 50px;
+  height: calc(100% + 0.4px);
+  -webkit-transform: skewX(-30deg);
+          transform: skewX(-30deg);
+}
+
+.services .container .service .info a {
+  text-transform: capitalize;
+  color: var(--main-color);
+}
+
+/* End Services */
 /* Start Animation */
 @-webkit-keyframes up-to-down {
   0%,
