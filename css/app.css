@@ -1543,6 +1543,95 @@ header .container .main-nav .mega-menu .links li:not(:last-child) {
 }
 
 /* End Plans */
+/* start video */
+.video {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+}
+
+.video .holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--section-background);
+  border: 1px solid #ddd;
+}
+
+@media (max-width: 991px) {
+  .video .holder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.video .holder .list {
+  min-width: 300px;
+  background-color: white;
+}
+
+.video .holder .list .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.video .holder .list ul li {
+  padding: 20px;
+  border-top: 1px solid var(--section-background);
+  cursor: pointer;
+  -webkit-transition: var(--main-transition);
+  transition: var(--main-transition);
+}
+
+.video .holder .list ul li:hover {
+  background-color: #fafafa;
+  color: var(--main-color);
+}
+
+.video .holder .list ul li span {
+  display: block;
+  margin-top: 10px;
+  color: #777;
+}
+
+.video .holder .preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #e2e2e2;
+  padding: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.video .holder .preview img {
+  max-width: 100%;
+}
+
+.video .holder .preview .info {
+  padding: 20px;
+  background-color: white;
+  margin-top: 10px;
+}
+
+/* End video */
 /* Start Animation */
 @-webkit-keyframes up-to-down {
   0%,
