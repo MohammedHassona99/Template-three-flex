@@ -837,6 +837,7 @@ header {
           height: 30px;
           background-color: #eee;
           position: relative;
+          transition: all var(--main-transition) ease-in;
           span {
             position: absolute;
             left: 0;
@@ -1284,6 +1285,7 @@ header {
         font-weight: bold;
         margin-top: 10px;
         margin-bottom: 10px;
+        transition: all var(--main-transition);
       }
       .text {
         color: var(--main-color);

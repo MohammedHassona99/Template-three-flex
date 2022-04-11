@@ -2,7 +2,6 @@
 // 1000 millisecond = 1 second
 
 let countDownDate = new Date("Dec 31, 2022 23:59:59").getTime();
-console.log(countDownDate);
 
 let counter = setInterval(() => {
   //get Date Now
@@ -27,3 +26,40 @@ let counter = setInterval(() => {
     clearInterval(counter);
   }
 }, 1000);
+
+// animation when scroll
+
+let ourSkills = document.querySelector("#our-skills");
+let spans = document.querySelectorAll(".progress span");
+window.onscroll = function () {
+  if (this.scrollY >= ourSkills.offsetTop) {
+    spans.forEach((ele) => {
+      ele.style.width = ele.dataset.width;
+    });
+  }
+};
+
+// animation increment when scroll
+
+let stats = document.querySelector(".stats");
+let statNum = document.querySelectorAll(".stats .stat .number");
+let started = false; // Function Started ? No
+
+window.onscroll = function () {
+  if (window.scrollY >= stats.offsetTop) {
+    if (!started) {
+      statNum.forEach((ele) => startCount(ele));
+    }
+    started = true;
+  }
+};
+
+function startCount(ele) {
+  let goal = ele.dataset.goal;
+  let count = setInterval(() => {
+    ele.textContent++;
+    if (ele.textContent == goal) {
+      clearInterval(count);
+    }
+  }, 1000 / goal);
+}

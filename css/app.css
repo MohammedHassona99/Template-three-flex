@@ -1151,6 +1151,8 @@ header .container .main-nav .mega-menu .links li:not(:last-child) {
   height: 30px;
   background-color: #eee;
   position: relative;
+  -webkit-transition: all var(--main-transition) ease-in;
+  transition: all var(--main-transition) ease-in;
 }
 
 .our-skills .container .skills .skill .progress span {
@@ -1800,6 +1802,8 @@ header .container .main-nav .mega-menu .links li:not(:last-child) {
   font-weight: bold;
   margin-top: 10px;
   margin-bottom: 10px;
+  -webkit-transition: all var(--main-transition);
+  transition: all var(--main-transition);
 }
 
 .stats .container .stat .text {
